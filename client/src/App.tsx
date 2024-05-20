@@ -1,10 +1,12 @@
-import { QuranPages, Sidebarbar } from './components'
+import { Outlet } from 'react-router-dom'
+import DefaultLayout from './components/layout/DefaultLayout'
 
 function App() {
   return (
     <div className='flex flex-row h-screen'>
-      <Sidebarbar />
-      <QuranPages />
+      <DefaultLayout>
+        <Outlet />
+      </DefaultLayout>
     </div>
   )
 }
